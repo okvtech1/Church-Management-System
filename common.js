@@ -6,7 +6,7 @@
    ========================================================= */
 
 // >>> SET THIS to your Apps Script Web App deployment URL <<<
-const API_BASE_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbxM-bBSSnDyibkfcgHK6iAo--rbG85Kf28wCBJTbdvPYnJl2spmohBH2JZRz3nA-UkS/exec';
 
 /* ---------- Password hashing (client-side SHA-256) ---------- */
 async function sha256Hex(text){
