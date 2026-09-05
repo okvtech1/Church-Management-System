@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1b3a">
+<title>Install OKV Church Management System</title>
+<meta name="description" content="Install the OKV Church Management System app on Android, iPhone/iPad, or desktop for one-tap, offline-ready access.">
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/install.html">
+<meta name="robots" content="index, follow">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+  body{ background:linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 100%); min-height:100vh; }
+  .gate-tabs{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+  .gate-tab{ border:1px solid #dfe4ee; background:#f7f8fb; color:var(--navy); font-size:.78rem; font-weight:600; padding:7px 11px; border-radius:20px; cursor:pointer; }
+  .gate-tab.active{ background:var(--navy); border-color:var(--navy); color:#fff; }
+  .gate-instructions{ display:none; background:#f7f8fb; border-radius:12px; padding:16px 18px; font-size:.88rem; color:#333; }
+  .gate-instructions.active{ display:block; }
+  .gate-hero i{ font-size:2.8rem; color:var(--gold); }
+</style>
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="brand-card">
+    <div class="brand-hero gate-hero">
+      <i class="bi bi-phone"></i>
+      <h4 class="fw-bold mt-3 mb-1">Install OKV Church Management System</h4>
+      <div style="color:#c9d3ea">Follow the steps for your device</div>
+    </div>
+    <div class="p-4">
+      <div id="installDefaultView">
+        <button class="btn btn-gold btn-lg w-100 mb-4" onclick="installClick()"><i class="bi bi-download me-2"></i>Install App</button>
+
+        <div class="gate-tabs" id="gateTabs">
+          <button type="button" class="gate-tab" data-tab="android" onclick="setTab('android')"><i class="bi bi-android2 me-1"></i>Android</button>
+          <button type="button" class="gate-tab" data-tab="ios" onclick="setTab('ios')"><i class="bi bi-apple me-1"></i>iPhone / iPad</button>
+          <button type="button" class="gate-tab" data-tab="desktop" onclick="setTab('desktop')"><i class="bi bi-display me-1"></i>Desktop</button>
+        </div>
+
+        <div class="gate-instructions" id="panel-android">
+          <ol class="mb-0 ps-3">
+            <li class="mb-2">Tap the <strong>⋮ menu</strong> in Chrome/Edge.</li>
+            <li class="mb-2">Tap <strong>"Install app"</strong> or <strong>"Add to Home screen."</strong></li>
+            <li class="mb-0">Confirm <strong>"Install."</strong> An icon appears on your home screen.</li>
+          </ol>
+        </div>
+        <div class="gate-instructions" id="panel-ios">
+          <ol class="mb-0 ps-3">
+            <li class="mb-2">Open this link in <strong>Safari</strong>.</li>
+            <li class="mb-2">Tap <strong>Share</strong> <i class="bi bi-box-arrow-up"></i>.</li>
+            <li class="mb-2">Tap <strong>"Add to Home Screen."</strong></li>
+            <li class="mb-0">Tap <strong>"Add."</strong></li>
+          </ol>
+        </div>
+        <div class="gate-instructions" id="panel-desktop">
+          <ol class="mb-0 ps-3">
+            <li class="mb-2">Click the <strong>install icon</strong> <i class="bi bi-download"></i> in the address bar, or tap "Install App" above.</li>
+            <li class="mb-0">Click <strong>"Install"</strong> in the dialog.</li>
+          </ol>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="app.html" class="small text-muted">Already installed? Go to login</a>
+        </div>
+      </div>
+
+      <div id="installSuccessView" style="display:none" class="text-center py-3">
+        <i class="bi bi-check-circle-fill text-success" style="font-size:3rem"></i>
+        <h5 class="fw-bold mt-3 mb-2" style="color:var(--navy)">Installation Started</h5>
+        <p class="text-muted mb-3">Open the app from your home screen or app list, then log in with the details your Admin gave you.</p>
+        <a href="app.html" class="btn btn-navy w-100">Go to Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+let deferredInstallPrompt = null;
+function isIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream; }
+function isAndroid(){ return /android/i.test(navigator.userAgent); }
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredInstallPrompt = e; });
+window.addEventListener('appinstalled', () => showSuccess());
+
+function setTab(name){
+  document.querySelectorAll('.gate-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.gate-instructions').forEach(p => p.classList.toggle('active', p.id === 'panel-'+name));
+}
+function defaultTab(){ if(isIOS()) return 'ios'; if(isAndroid()) return 'android'; return 'desktop'; }
+function showSuccess(){
+  document.getElementById('installDefaultView').style.display = 'none';
+  document.getElementById('installSuccessView').style.display = 'block';
+}
+async function installClick(){
+  if(deferredInstallPrompt){
+    deferredInstallPrompt.prompt();
+    const choice = await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    if(choice && choice.outcome === 'accepted') showSuccess();
+    return;
+  }
+  setTab(defaultTab());
+  document.getElementById('gateTabs').scrollIntoView({behavior:'smooth', block:'center'});
+}
+setTab(defaultTab());
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+}
+</script>
+<footer class="text-center text-muted small py-4">
+  <i class="bi bi-envelope me-1"></i>technologyokv@gmail.com &nbsp;&middot;&nbsp;
+  <i class="bi bi-telephone me-1"></i>+2348104141138 &nbsp;&middot;&nbsp;
+  <i class="bi bi-globe me-1"></i>www.okvtechnology.com
+  <div class="mt-2"><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service.html">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="refund-policy.html">Refund Policy</a></div>
+</footer>
+</body>
+</html>

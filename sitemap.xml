@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OKV Church Management System — sitemap.xml
+     Replace YOUR-DOMAIN-HERE.com below with your real deployed domain
+     (must match robots.txt and the <link rel="canonical"> tag on each
+     page). See SEO-GUIDE.md for how to submit this to Google. -->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN-HERE.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/pricing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/demo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/signup.html</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/install.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN-HERE.com/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-09-04</lastmod></url>
+</urlset>

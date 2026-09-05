@@ -1,0 +1,10 @@
+# OKV Church Management System — robots.txt
+# Replace YOUR-DOMAIN-HERE.com below (and in sitemap.xml / the <link rel="canonical">
+# tags on every page) with the real domain you deploy this to. See SEO-GUIDE.md.
+
+User-agent: *
+Allow: /
+Disallow: /app.html
+Disallow: /reset-password.html
+
+Sitemap: https://YOUR-DOMAIN-HERE.com/sitemap.xml

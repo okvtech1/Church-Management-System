@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — OKV Church Management System</title>
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="description" content="Compare OKV Church Management System plans and pricing — Starter and Professional, monthly, bi-annual, or yearly billing, with a 7-day free trial.">
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/pricing.html">
+<meta name="robots" content="index, follow">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+  .navbar-sale{ background:#fff; box-shadow:0 2px 14px rgba(0,0,0,.06); padding:12px 0; }
+  .navbar-sale .logo{ font-weight:800; color:var(--navy); font-size:1.15rem; }
+  .pricing-hero{ background:linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 100%); color:#fff; padding:56px 0 40px; text-align:center; }
+  .cycle-tabs{ display:flex; justify-content:center; gap:8px; margin-top:26px; flex-wrap:wrap; }
+  .cycle-tab{ border:1px solid rgba(255,255,255,.3); background:transparent; color:#fff; font-weight:600; padding:9px 20px; border-radius:30px; cursor:pointer; }
+  .cycle-tab.active{ background:var(--gold); border-color:var(--gold); color:#1c2333; }
+  .save-badge{ background:#1b7a43; color:#fff; font-size:.7rem; font-weight:700; padding:.2rem .5rem; border-radius:12px; margin-left:6px; }
+  .plan-set{ display:none; }
+  .plan-set.active{ display:block; }
+  .plan-card{ border:2px solid #eef0f6; border-radius:20px; padding:32px; height:100%; }
+  .plan-card.featured{ border-color:var(--gold); box-shadow:0 20px 50px rgba(212,175,55,.15); position:relative; }
+  .plan-card.featured .ribbon{ position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--gold); color:#1c2333; font-weight:700; font-size:.72rem; padding:.3rem .9rem; border-radius:20px; }
+  .plan-name{ font-weight:800; color:var(--navy); font-size:1.3rem; }
+  .plan-price{ font-weight:800; font-size:2.2rem; color:var(--navy); }
+  .plan-suited{ background:#f4f6fb; border-radius:10px; padding:10px 14px; font-size:.82rem; color:#333; margin:14px 0; }
+  .plan-features li{ margin-bottom:10px; font-size:.9rem; }
+  .plan-features i{ color:#1b7a43; margin-right:6px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar-sale">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo text-decoration-none"><i class="bi bi-building me-1"></i>OKV <span style="color:var(--gold)">CMS</span></a>
+    <a href="index.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Back to Home</a>
+  </div>
+</nav>
+
+<div class="pricing-hero">
+  <div class="container">
+    <h1 class="fw-bold">Simple, Flexible Pricing</h1>
+    <p style="color:#c9d3ea">Every plan starts with a 7-day free trial. No card required. 30-day money-back guarantee on all paid plans.</p>
+    <div class="cycle-tabs">
+      <button class="cycle-tab active" data-cycle="Monthly" onclick="setCycle('Monthly')">Monthly</button>
+      <button class="cycle-tab" data-cycle="Bi-Annual" onclick="setCycle('Bi-Annual')">Bi-Annually <span class="save-badge">Save 11%</span></button>
+      <button class="cycle-tab" data-cycle="Yearly" onclick="setCycle('Yearly')">Yearly <span class="save-badge">Save 20%</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+
+  <!-- Monthly -->
+  <div class="plan-set active" id="set-Monthly">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="plan-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span id="price-Starter-Monthly">&#8358;7,500</span><span class="fs-6 text-muted">/mo</span></div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Starter-Monthly">small churches and single-branch congregations just digitizing their records.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Members, families &amp; visitors</li>
+            <li><i class="bi bi-check-circle-fill"></i>Attendance &amp; events</li>
+            <li><i class="bi bi-check-circle-fill"></i>Tithes, offerings &amp; pledges</li>
+            <li><i class="bi bi-check-circle-fill"></i>Ministries &amp; volunteers</li>
+            <li><i class="bi bi-check-circle-fill"></i>Works fully offline</li>
+            <li><i class="bi bi-check-circle-fill"></i>Member directory &amp; announcements</li>
+            <li><i class="bi bi-check-circle-fill"></i>1 Admin + 2 Users</li>
+          </ul>
+          <a href="signup.html?plan=basic&cycle=Monthly" class="btn btn-navy w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="plan-card featured">
+          <div class="ribbon">MOST POPULAR</div>
+          <div class="plan-name">Professional</div>
+          <div class="plan-price"><span id="price-Professional-Monthly">&#8358;15,000</span><span class="fs-6 text-muted">/mo</span></div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Professional-Monthly">multi-branch churches and ministries needing reports, exports and full team access.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Everything in Starter, plus:</li>
+            <li><i class="bi bi-check-circle-fill"></i>Reports &amp; financial analytics</li>
+            <li><i class="bi bi-check-circle-fill"></i>CSV import/export &amp; printing</li>
+            <li><i class="bi bi-check-circle-fill"></i>Full data backup &amp; restore</li>
+            <li><i class="bi bi-check-circle-fill"></i>Multi-branch support</li>
+            <li><i class="bi bi-check-circle-fill"></i>Bulk Email/SMS/WhatsApp messaging</li>
+            <li><i class="bi bi-check-circle-fill"></i>Unlimited Admins &amp; Users</li>
+          </ul>
+          <a href="signup.html?plan=professional&cycle=Monthly" class="btn btn-gold w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bi-Annual -->
+  <div class="plan-set" id="set-Bi-Annual">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="plan-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span id="price-Starter-Bi-Annual">&#8358;40,000</span><span class="fs-6 text-muted">/6mo</span></div>
+          <div class="text-muted small mb-2" id="equiv-Starter-Bi-Annual">≈ &#8358;6,667/mo — save 11% vs monthly</div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Starter-Bi-Annual">small churches and single-branch congregations just digitizing their records.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Members, families &amp; visitors</li>
+            <li><i class="bi bi-check-circle-fill"></i>Attendance &amp; events</li>
+            <li><i class="bi bi-check-circle-fill"></i>Tithes, offerings &amp; pledges</li>
+            <li><i class="bi bi-check-circle-fill"></i>Ministries &amp; volunteers</li>
+            <li><i class="bi bi-check-circle-fill"></i>Works fully offline</li>
+            <li><i class="bi bi-check-circle-fill"></i>Member directory &amp; announcements</li>
+            <li><i class="bi bi-check-circle-fill"></i>1 Admin + 2 Users</li>
+          </ul>
+          <a href="signup.html?plan=basic&cycle=Bi-Annual" class="btn btn-navy w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="plan-card featured">
+          <div class="ribbon">MOST POPULAR</div>
+          <div class="plan-name">Professional</div>
+          <div class="plan-price"><span id="price-Professional-Bi-Annual">&#8358;80,000</span><span class="fs-6 text-muted">/6mo</span></div>
+          <div class="text-muted small mb-2" id="equiv-Professional-Bi-Annual">≈ &#8358;13,333/mo — save 11% vs monthly</div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Professional-Bi-Annual">multi-branch churches and ministries needing reports, exports and full team access.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Everything in Starter, plus:</li>
+            <li><i class="bi bi-check-circle-fill"></i>Reports &amp; financial analytics</li>
+            <li><i class="bi bi-check-circle-fill"></i>CSV import/export &amp; printing</li>
+            <li><i class="bi bi-check-circle-fill"></i>Full data backup &amp; restore</li>
+            <li><i class="bi bi-check-circle-fill"></i>Multi-branch support</li>
+            <li><i class="bi bi-check-circle-fill"></i>Bulk Email/SMS/WhatsApp messaging</li>
+            <li><i class="bi bi-check-circle-fill"></i>Unlimited Admins &amp; Users</li>
+          </ul>
+          <a href="signup.html?plan=professional&cycle=Bi-Annual" class="btn btn-gold w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yearly -->
+  <div class="plan-set" id="set-Yearly">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="plan-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span id="price-Starter-Yearly">&#8358;72,000</span><span class="fs-6 text-muted">/yr</span></div>
+          <div class="text-muted small mb-2" id="equiv-Starter-Yearly">≈ &#8358;6,000/mo — save 20% vs monthly</div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Starter-Yearly">small churches and single-branch congregations just digitizing their records.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Members, families &amp; visitors</li>
+            <li><i class="bi bi-check-circle-fill"></i>Attendance &amp; events</li>
+            <li><i class="bi bi-check-circle-fill"></i>Tithes, offerings &amp; pledges</li>
+            <li><i class="bi bi-check-circle-fill"></i>Ministries &amp; volunteers</li>
+            <li><i class="bi bi-check-circle-fill"></i>Works fully offline</li>
+            <li><i class="bi bi-check-circle-fill"></i>Member directory &amp; announcements</li>
+            <li><i class="bi bi-check-circle-fill"></i>1 Admin + 2 Users</li>
+          </ul>
+          <a href="signup.html?plan=basic&cycle=Yearly" class="btn btn-navy w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="plan-card featured">
+          <div class="ribbon">MOST POPULAR</div>
+          <div class="plan-name">Professional</div>
+          <div class="plan-price"><span id="price-Professional-Yearly">&#8358;144,000</span><span class="fs-6 text-muted">/yr</span></div>
+          <div class="text-muted small mb-2" id="equiv-Professional-Yearly">≈ &#8358;12,000/mo — save 20% vs monthly</div>
+          <div class="plan-suited"><i class="bi bi-info-circle me-1"></i>Best for: <span id="suited-Professional-Yearly">multi-branch churches and ministries needing reports, exports and full team access.</span></div>
+          <ul class="list-unstyled plan-features">
+            <li><i class="bi bi-check-circle-fill"></i>Everything in Starter, plus:</li>
+            <li><i class="bi bi-check-circle-fill"></i>Reports &amp; financial analytics</li>
+            <li><i class="bi bi-check-circle-fill"></i>CSV import/export &amp; printing</li>
+            <li><i class="bi bi-check-circle-fill"></i>Full data backup &amp; restore</li>
+            <li><i class="bi bi-check-circle-fill"></i>Multi-branch support</li>
+            <li><i class="bi bi-check-circle-fill"></i>Bulk Email/SMS/WhatsApp messaging</li>
+            <li><i class="bi bi-check-circle-fill"></i>Unlimited Admins &amp; Users</li>
+          </ul>
+          <a href="signup.html?plan=professional&cycle=Yearly" class="btn btn-gold w-100 mt-2">Start for Free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <div class="d-inline-flex align-items-center gap-2 text-muted small">
+      <i class="bi bi-shield-check" style="color:var(--gold);font-size:1.3rem"></i>
+      30-Day Money-Back Guarantee on every paid plan — no risk in trying it properly.
+    </div>
+  </div>
+</div>
+
+<script src="common.js"></script>
+<script>
+function setCycle(cycle){
+  document.querySelectorAll('.cycle-tab').forEach(b => b.classList.toggle('active', b.dataset.cycle === cycle));
+  document.querySelectorAll('.plan-set').forEach(s => s.classList.toggle('active', s.id === 'set-'+cycle));
+}
+
+/* Pull live pricing/branding/contact from the Super Admin's settings so
+   changes made on that dashboard show up here immediately — falls back
+   to the values already in the page if offline or not yet configured.
+   Uses the shared api() helper from common.js, so API_BASE_URL only ever
+   needs to be set in one place (common.js) for the whole site. */
+async function loadLivePricing(){
+  try{
+    const data = await api('publicSettings', {});
+    if(data.error || !data.settings) return;
+    const s = data.settings;
+
+    if(s.branding){
+      document.documentElement.style.setProperty('--navy', s.branding.primaryColor || '#0b1b3a');
+      document.documentElement.style.setProperty('--gold', s.branding.accentColor || '#d4af37');
+    }
+    if(s.contact){
+      document.querySelectorAll('.contact-email-text').forEach(el => el.textContent = s.contact.email);
+      document.querySelectorAll('.contact-phone-text').forEach(el => el.textContent = s.contact.phone);
+      document.querySelectorAll('.contact-website-text').forEach(el => el.textContent = s.contact.website);
+    }
+    if(!s.plans) return;
+    ['Starter','Professional'].forEach(tier => {
+      const p = s.plans[tier];
+      if(!p) return;
+      ['Monthly','Bi-Annual','Yearly'].forEach(cycle => {
+        const priceEl = document.getElementById(`price-${tier}-${cycle}`);
+        if(priceEl && p[cycle] !== undefined) priceEl.textContent = '₦' + Number(p[cycle]).toLocaleString();
+        const suitedEl = document.getElementById(`suited-${tier}-${cycle}`);
+        if(suitedEl && p.suitedFor) suitedEl.textContent = p.suitedFor;
+      });
+      const equivBi = document.getElementById(`equiv-${tier}-Bi-Annual`);
+      if(equivBi && p.Monthly && p['Bi-Annual']){
+        const perMo = Math.round(p['Bi-Annual']/6);
+        const pct = Math.round((1 - (p['Bi-Annual']/6)/p.Monthly) * 100);
+        equivBi.textContent = `≈ ₦${perMo.toLocaleString()}/mo — save ${pct}% vs monthly`;
+      }
+      const equivYr = document.getElementById(`equiv-${tier}-Yearly`);
+      if(equivYr && p.Monthly && p.Yearly){
+        const perMo = Math.round(p.Yearly/12);
+        const pct = Math.round((1 - (p.Yearly/12)/p.Monthly) * 100);
+        equivYr.textContent = `≈ ₦${perMo.toLocaleString()}/mo — save ${pct}% vs monthly`;
+      }
+    });
+  }catch(err){ /* offline or not configured yet — page already shows sensible defaults */ }
+}
+loadLivePricing();
+</script>
+<footer class="text-center text-muted small py-4">
+  <i class="bi bi-envelope me-1"></i><span class="contact-email-text">technologyokv@gmail.com</span> &nbsp;&middot;&nbsp;
+  <i class="bi bi-telephone me-1"></i><span class="contact-phone-text">+2348104141138</span> &nbsp;&middot;&nbsp;
+  <i class="bi bi-globe me-1"></i><span class="contact-website-text">www.okvtechnology.com</span>
+  <div class="mt-2"><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service.html">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="refund-policy.html">Refund Policy</a></div>
+</footer>
+</body>
+</html>

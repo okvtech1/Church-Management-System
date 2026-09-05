@@ -1,0 +1,30 @@
+:root{
+  --navy:#0b1b3a; --navy-2:#132b5c; --gold:#d4af37; --bg:#f4f6fb;
+}
+body{ background:var(--bg); font-family:'Segoe UI',system-ui,sans-serif; color:#1c2333; }
+.brand-hero{ background:linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 100%); color:#fff; text-align:center; padding:38px 28px 26px; }
+.brand-hero i{ font-size:2.6rem; color:var(--gold); }
+.brand-card{ max-width:440px; width:100%; margin:auto; background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 25px 70px rgba(0,0,0,.18); }
+.brand-card.wide{ max-width:960px; }
+.auth-wrap{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+.btn-navy{ background:var(--navy); border-color:var(--navy); color:#fff; }
+.btn-navy:hover{ background:var(--navy-2); border-color:var(--navy-2); color:#fff; }
+.btn-gold{ background:var(--gold); border-color:var(--gold); color:#1c2333; font-weight:600; }
+.btn-gold:hover{ background:#c19f2e; border-color:#c19f2e; color:#1c2333; }
+.form-label{ font-weight:600; font-size:.85rem; color:var(--navy); }
+.link-gold{ color:#a9832a; font-weight:600; text-decoration:none; }
+.link-gold:hover{ text-decoration:underline; }
+#offlineBanner{ display:none; background:#8a1f1f; color:#fff; text-align:center; padding:8px; font-size:.85rem; }
+#offlineBanner.show{ display:block; }
+.badge-role{ background:#eef1fa; color:var(--navy); border:1px solid #dfe4ee; font-weight:600; font-size:.72rem; padding:.3rem .55rem; border-radius:20px; display:inline-block; margin:2px; }
+.badge-role.removable{ cursor:pointer; }
+.badge-role.removable:hover{ background:#fde3e3; color:#8a1f1f; border-color:#f3b8b8; }
+.status-pill{ font-size:.72rem; font-weight:700; padding:.25rem .6rem; border-radius:20px; }
+.status-active{ background:#e6f7ee; color:#1b7a43; }
+.status-suspended{ background:#fdeaea; color:#a32424; }
+#syncToast{ position:fixed; bottom:18px; right:18px; z-index:3000; }
+.password-wrap{ position:relative; }
+.password-wrap input{ padding-right:2.6rem; }
+.password-toggle-btn{ position:absolute; right:6px; top:50%; transform:translateY(-50%); background:none; border:none; color:#8992a9; cursor:pointer; padding:6px; line-height:1; z-index:5; }
+.password-toggle-btn:hover{ color:var(--navy); }
+.password-toggle-btn:focus{ outline:none; box-shadow:none; }

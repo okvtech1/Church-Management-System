@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKV Church Management System — Run Your Church, Online or Offline</title>
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/index.html">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Offline-first, multi-user church management system for members, finance, attendance and ministries — works on phone, tablet and laptop, with or without internet.">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+  html{ scroll-behavior:smooth; }
+  body{ overflow-x:hidden; }
+  .navbar-sale{ background:#fff; box-shadow:0 2px 14px rgba(0,0,0,.06); position:sticky; top:0; z-index:1000; padding:12px 0; }
+  .navbar-sale .logo{ font-weight:800; color:var(--navy); font-size:1.15rem; }
+  .navbar-sale .logo i{ color:var(--gold); }
+  .navbar-sale .nav-link{ color:#333; font-weight:600; font-size:.92rem; }
+  .navbar-sale .nav-link:hover{ color:var(--navy); }
+  .hero{ background:linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 100%); color:#fff; padding:90px 0 100px; }
+  .hero h1{ font-weight:800; font-size:2.6rem; }
+  .hero .lead{ color:#c9d3ea; font-size:1.15rem; }
+  .badge-guarantee{ background:#fff; color:var(--navy); font-weight:700; padding:.5rem 1rem; border-radius:30px; display:inline-flex; align-items:center; gap:8px; }
+  section{ padding:70px 0; }
+  .section-title{ font-weight:800; color:var(--navy); }
+  .section-kicker{ color:var(--gold); font-weight:700; text-transform:uppercase; font-size:.78rem; letter-spacing:.08em; }
+  .feature-card{ border:1px solid #eef0f6; border-radius:16px; padding:26px; height:100%; transition:.2s; }
+  .feature-card:hover{ box-shadow:0 12px 30px rgba(11,27,58,.08); transform:translateY(-3px); }
+  .feature-card i{ font-size:1.8rem; color:var(--gold); background:#0b1b3a; width:52px; height:52px; display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:14px; }
+  .how-step{ display:flex; gap:16px; margin-bottom:26px; }
+  .how-step .num{ width:38px; height:38px; border-radius:50%; background:var(--navy); color:var(--gold); font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .device-card{ text-align:center; padding:26px; }
+  .device-card i{ font-size:2.6rem; color:var(--navy); }
+  .why-item{ display:flex; gap:14px; margin-bottom:22px; }
+  .why-item i{ color:#1b7a43; font-size:1.3rem; margin-top:2px; }
+  .accordion-button:not(.collapsed){ background:#f4f6fb; color:var(--navy); }
+  footer{ background:var(--navy); color:#c9d3ea; padding:50px 0 20px; }
+  footer h6{ color:#fff; font-weight:700; }
+  footer a{ color:#c9d3ea; text-decoration:none; }
+  footer a:hover{ color:var(--gold); }
+  .cta-band{ background:linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 100%); color:#fff; text-align:center; border-radius:24px; padding:56px 30px; }
+  .guarantee-strip{ background:#fff9ec; border:1px solid #f3e3b3; border-radius:16px; padding:22px 26px; display:flex; align-items:center; gap:16px; }
+  .guarantee-strip i{ font-size:2.2rem; color:var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="navbar-sale">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+    <a href="#top" class="logo text-decoration-none"><i class="bi bi-building me-1"></i>OKV <span style="color:var(--gold)">CMS</span></a>
+    <button class="btn btn-outline-secondary btn-sm d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#saleNavLinks">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="d-none d-lg-flex gap-4">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#cross-platform" class="nav-link">Cross-Platform</a>
+      <a href="#why-us" class="nav-link">Why Us</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <a href="pricing.html" class="btn btn-gold btn-sm d-none d-lg-inline-block"><i class="bi bi-rocket-takeoff me-1"></i>Start 7-Day Free Trial</a>
+    <div class="collapse w-100 d-lg-none mt-3" id="saleNavLinks">
+      <div class="d-flex flex-column gap-2 pb-2">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#cross-platform" class="nav-link">Cross-Platform</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="pricing.html" class="btn btn-gold btn-sm mt-2"><i class="bi bi-rocket-takeoff me-1"></i>Start 7-Day Free Trial</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="section-kicker mb-2">Offline &amp; Online Church Management</div>
+        <h1>Run every part of your church — even without internet.</h1>
+        <p class="lead mt-3">Members, finance, attendance, ministries and more, in one system that works fully offline and syncs automatically the moment you're back online. Built for churches across Nigeria and beyond.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="pricing.html" class="btn btn-gold btn-lg"><i class="bi bi-rocket-takeoff me-1"></i>Start 7-Day Free Trial</a>
+          <a href="demo.html" class="btn btn-outline-light btn-lg"><i class="bi bi-play-circle me-1"></i>View Live Demo</a>
+        </div>
+        <div class="badge-guarantee mt-4"><i class="bi bi-shield-check"></i> 30-Day Money-Back Guarantee</div>
+      </div>
+      <div class="col-lg-5">
+        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-light border-opacity-25">
+          <i class="bi bi-display display-1" style="color:var(--gold)"></i>
+          <div class="mt-3 small" style="color:#c9d3ea">Works on laptop, tablet and mobile — install it like a native app, no app store needed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-kicker">About The System</div>
+        <h2 class="section-title mb-3">One system for your whole church, from the front desk to the finance office</h2>
+        <p class="text-muted">OKV Church Management System replaces scattered spreadsheets, paper registers and WhatsApp broadcasts with one organized place for membership records, attendance, tithes &amp; offerings, ministries, pastoral care, events and communications — built specifically around how churches actually run.</p>
+        <p class="text-muted">It's built offline-first: your data lives on your device first, so a weak network on a Sunday morning never stops you from taking attendance or recording a member's details. When you're back online, everything syncs automatically.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6"><div class="feature-card"><i class="bi bi-people"></i><div class="fw-bold">Members &amp; Families</div></div></div>
+          <div class="col-6"><div class="feature-card"><i class="bi bi-cash-coin"></i><div class="fw-bold">Finance &amp; Giving</div></div></div>
+          <div class="col-6"><div class="feature-card"><i class="bi bi-calendar-check"></i><div class="fw-bold">Attendance</div></div></div>
+          <div class="col-6"><div class="feature-card"><i class="bi bi-diagram-3"></i><div class="fw-bold">Ministries</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how-it-works" class="bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">How It Works</div>
+      <h2 class="section-title">Offline when you need it. Online when you want it.</h2>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <h5 class="fw-bold mb-3" style="color:var(--navy)"><i class="bi bi-wifi-off me-2"></i>Offline Mode</h5>
+        <div class="how-step"><div class="num">1</div><div>Install the app once — it works like any app on your device, no browser or internet required afterward.</div></div>
+        <div class="how-step"><div class="num">2</div><div>Add, edit and manage every record right on the device — all data is saved instantly, even in airplane mode.</div></div>
+        <div class="how-step"><div class="num">3</div><div>Nothing is lost — every record stays safely on your device until you're ready to sync.</div></div>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="fw-bold mb-3" style="color:var(--navy)"><i class="bi bi-cloud-check me-2"></i>Online Mode</h5>
+        <div class="how-step"><div class="num">1</div><div>Sign in from any device on your team, with role-based access for Admins and Users.</div></div>
+        <div class="how-step"><div class="num">2</div><div>Changes sync automatically in the background — or tap Sync any time — with a notification when it's done.</div></div>
+        <div class="how-step"><div class="num">3</div><div>Everyone on your team sees the same up-to-date information, scoped safely to your organization only.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CROSS-PLATFORM ===================== -->
+<section id="cross-platform">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Cross-Platform Accessibility</div>
+      <h2 class="section-title">One account, every device</h2>
+      <p class="text-muted">No app store, no separate downloads — install straight from your browser in seconds.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="device-card"><i class="bi bi-laptop"></i><div class="fw-bold mt-2">Laptop / Desktop</div><div class="text-muted small">Windows, Mac or Chromebook — install via Chrome or Edge for a full desktop app experience.</div></div></div>
+      <div class="col-md-4"><div class="device-card"><i class="bi bi-tablet"></i><div class="fw-bold mt-2">Tablet</div><div class="text-muted small">A larger screen for front-desk check-in, ushers, and finance teams during services.</div></div></div>
+      <div class="col-md-4"><div class="device-card"><i class="bi bi-phone"></i><div class="fw-bold mt-2">Mobile</div><div class="text-muted small">Android and iPhone — add it to your home screen and manage your church on the go.</div></div></div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="text-muted small">Powered by modern web technology (a Progressive Web App) — always up to date, no manual updates to install.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features" class="bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Features</div>
+      <h2 class="section-title">Everything your church office actually needs</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-people"></i><h6 class="fw-bold">Membership &amp; Families</h6><p class="text-muted small mb-0">Full member profiles, family units, visitors and membership classes.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-cash-coin"></i><h6 class="fw-bold">Finance &amp; Giving</h6><p class="text-muted small mb-0">Tithes, offerings, pledges, expenses and financial reports.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-calendar-check"></i><h6 class="fw-bold">Attendance &amp; Events</h6><p class="text-muted small mb-0">Track attendance and manage the church calendar in one place.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-diagram-3"></i><h6 class="fw-bold">Ministries &amp; Departments</h6><p class="text-muted small mb-0">Organize ministries, volunteers and small groups with ease.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-heart"></i><h6 class="fw-bold">Pastoral Care</h6><p class="text-muted small mb-0">Weddings, funerals, counseling notes and follow-ups.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-people-fill"></i><h6 class="fw-bold">Multi-User Roles</h6><p class="text-muted small mb-0">Admins and Users, each with the right level of access — fully editable.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-download"></i><h6 class="fw-bold">Import &amp; Export</h6><p class="text-muted small mb-0">Bring in existing spreadsheets via CSV, export anytime, full backup &amp; restore.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-wifi-off"></i><h6 class="fw-bold">Works Fully Offline</h6><p class="text-muted small mb-0">No internet? No problem — everything still works, and syncs later.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-send"></i><h6 class="fw-bold">Personalized Messaging</h6><p class="text-muted small mb-0">Send announcements, birthday and anniversary messages to members individually or all at once, by Email, SMS or WhatsApp.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-chat-dots"></i><h6 class="fw-bold">Team Messaging</h6><p class="text-muted small mb-0">Admins and Users can message each other directly inside the system.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-journal-text"></i><h6 class="fw-bold">Built-In User Manual</h6><p class="text-muted small mb-0">A downloadable guide tailored to your plan and role, right on your dashboard.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><i class="bi bi-graph-up"></i><h6 class="fw-bold">Reports &amp; Analytics</h6><p class="text-muted small mb-0">Real insight into growth, giving and attendance trends.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section id="why-us">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="section-kicker">Why Choose OKV CMS</div>
+        <h2 class="section-title mb-4">Built for how churches actually operate — not a generic business tool</h2>
+        <div class="why-item"><i class="bi bi-check-circle-fill"></i><div><strong>Offline-first by design</strong> — most systems assume constant internet; ours doesn't.</div></div>
+        <div class="why-item"><i class="bi bi-check-circle-fill"></i><div><strong>No app store required</strong> — installs directly from the browser on any device.</div></div>
+        <div class="why-item"><i class="bi bi-check-circle-fill"></i><div><strong>Built around real church workflows</strong> — ministries, tithes, pastoral care, not generic "customers."</div></div>
+        <div class="why-item"><i class="bi bi-check-circle-fill"></i><div><strong>Transparent, flexible pricing</strong> — monthly, bi-annual or yearly, cancel anytime.</div></div>
+        <div class="why-item"><i class="bi bi-check-circle-fill"></i><div><strong>Your data, your control</strong> — full backup and export whenever you want.</div></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="guarantee-strip">
+          <i class="bi bi-shield-check"></i>
+          <div>
+            <div class="fw-bold" style="color:var(--navy)">30-Day Money-Back Guarantee</div>
+            <div class="text-muted small">Try it risk-free. If it's not right for your church within your first 30 days on a paid plan, get a full refund — no hard questions asked.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Questions &amp; Answers</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="accordion mx-auto" style="max-width:760px" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq1">Does it really work without internet?</button></h2>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. Once installed, every module works fully offline — add, edit and view records with no connection at all. Anything you do while offline syncs automatically once you're back online.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">What devices can I use it on?</button></h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Any laptop, tablet or phone with a modern browser — Windows, Mac, Android or iPhone. It installs directly from the browser, no app store needed.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">What happens after my free trial?</button></h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">You get full access for 7 days, no card required upfront. When it ends, choose a monthly, bi-annual or yearly plan from your dashboard to keep going — your data stays exactly as you left it.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">Can I add more than one user?</button></h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes — Admins can create Users, assign roles like Finance Officer or Membership Officer, and control exactly who sees what.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Is my church's data safe?</button></h2>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Your data is scoped strictly to your organization — no other church can ever see it. You can also export a full backup at any time.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">What if it's not right for us?</button></h2>
+        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">You're covered by our 30-day money-back guarantee on any paid plan — no risk in trying it properly.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2 class="fw-bold mb-2">Ready to bring your church records into one place?</h2>
+      <p class="mb-4" style="color:#c9d3ea">Start your free 7-day trial today — no card required.</p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="pricing.html" class="btn btn-gold btn-lg"><i class="bi bi-rocket-takeoff me-1"></i>Start 7-Day Free Trial</a>
+        <a href="demo.html" class="btn btn-outline-light btn-lg"><i class="bi bi-play-circle me-1"></i>View Live Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h6><i class="bi bi-building me-1"></i>OKV Church Management System</h6>
+        <p class="small">Offline-first church management for teams of any size — built by OKV Technology Consults.</p>
+      </div>
+      <div class="col-lg-2">
+        <h6>Explore</h6>
+        <div class="small d-flex flex-column gap-2">
+          <a href="#about">About</a><a href="#features">Features</a><a href="#faq">FAQ</a><a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <h6>Get Started</h6>
+        <div class="small d-flex flex-column gap-2">
+          <a href="pricing.html">Start Free Trial</a><a href="demo.html">Live Demo</a><a href="app.html">Log In</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h6>Contact</h6>
+        <div class="small d-flex flex-column gap-2">
+          <a href="https://wa.me/2348104141138"><i class="bi bi-whatsapp me-1"></i>+234 810 414 1138</a>
+          <a href="mailto:technologyokv@gmail.com"><i class="bi bi-envelope me-1"></i>technologyokv@gmail.com</a>
+          <a href="https://www.okvtechnology.com"><i class="bi bi-globe me-1"></i>www.okvtechnology.com</a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="small text-center mb-2">
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="terms-of-service.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+      <a href="refund-policy.html">Refund Policy</a>
+    </div>
+    <div class="small text-center">&copy; <span id="year"></span> OKV Technology Consults. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
